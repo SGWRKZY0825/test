@@ -30,14 +30,14 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
       - name: Setup Terraform
-        uses: hashicorp/setup-terraform@v2
+        uses: hashicorp/setup-terraform@v3
         with: 
           terraform_version: ${{ env.TF_VERSION }}
       - name: Terraform format
         run:  |
           terraform fmt -check
       - name: Configure AWS Credentials
-        uses: aws-actions/configure-aws-credentials@v1
+        uses: aws-actions/configure-aws-credentials@v4
         with: 
           aws-region: ${{ env.AWS_REGION }}
           role-to-assume: ${{ secrets.AWS_IAM_ROLE_ARN }}
