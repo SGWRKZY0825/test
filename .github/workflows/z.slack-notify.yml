@@ -13,29 +13,29 @@ on:
           with:
             channel-id: "C01BD0FDL5A"
             payload:  |
-            {
-              "attachments": [
-                {
-                  "blocks": [
-                    {
-                      "type": "header",
-                      "text": {
-                        "type": "plain_text",
-                        "text": "Message Header",
-                        "emoji": true
+              {
+                "attachments": [
+                  {
+                    "blocks": [
+                      {
+                        "type": "header",
+                        "text": {
+                          "type": "plain_text",
+                          "text": "Message Header",
+                          "emoji": true
+                        }
+                      },
+                      {
+                        "type": "section",
+                        "text": {
+                          "type": "mrkdwn",
+                          "text": "Hello world :ghost: "
+                        }
                       }
-                    },
-                    {
-                      "type": "section",
-                      "text": {
-                        "type": "mrkdwn",
-                        "text": "Hello world :ghost: "
-                      }
-                    }
-                  ]
-                }
-              ]
-            }
+                    ]
+                  }
+                ]
+              }
           env:
             SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
 
